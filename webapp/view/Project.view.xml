@@ -1,0 +1,13 @@
+<mvc:View
+    controllerName="hipt.hipt.controller.Project"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="Shart"
+    >
+        <content />
+    </Page>
+</mvc:View>
