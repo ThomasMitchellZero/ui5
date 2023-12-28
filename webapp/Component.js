@@ -5,9 +5,10 @@
 sap.ui.define([
         "sap/ui/core/UIComponent",
         "sap/ui/Device",
-        "hipt/hipt/model/models"
+        "sap/ui/model/json/JSONModel"
+
     ],
-    function (UIComponent, Device, models) {
+    function (UIComponent, Device, JSONModel) {
         "use strict";
 
         return UIComponent.extend("hipt.hipt.Component", {
@@ -28,7 +29,9 @@ sap.ui.define([
                 this.getRouter().initialize();
 
                 // set the device model
-                this.setModel(models.createDeviceModel(), "device");
+                var oDeviceModel = new JSONModel(Device);
+                oDeviceModel.setDefaultBindingMode("OneWay");
+                this.setModel(oDeviceModel, "device");
             }
         });
     }
