@@ -5,7 +5,8 @@
     displayBlock="true"
     xmlns="sap.m"
 >
-    <Panel id="BasicPanel"></Panel>
+    <Panel id="BasicPanel">
+    </Panel>
 </mvc:View>
 
 

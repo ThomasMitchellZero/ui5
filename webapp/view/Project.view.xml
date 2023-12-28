@@ -9,13 +9,7 @@
         title="Shartrell"
     >
         <content>
-            <Panel
-                id="mainPanel"
-                class="sapUiResponsiveMargin sapUiResponsiveContentPadding"
-                width="auto"
-            >
-                <content />
-            </Panel>
+
         </content>
     </Page>
 </mvc:View>
