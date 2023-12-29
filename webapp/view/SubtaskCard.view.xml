@@ -5,7 +5,7 @@
     displayBlock="true"
     xmlns="sap.m"
 >
-    <Panel id="BasicPanel">
+    <Panel id="SubtaskCard">
     </Panel>
 </mvc:View>
 
