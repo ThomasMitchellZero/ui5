@@ -5,7 +5,7 @@ sap.ui.define([
  ], (Controller, JSONModel) => {
     "use strict";
  
-    return Controller.extend("hipt.hipt.controller.PhaseCard", {
+    return Controller.extend("hipt.hipt.controller.SubtaskCard", {
 
         
         onInit: function() {

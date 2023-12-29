@@ -8,13 +8,10 @@ sap.ui.define([
     function (Controller, JSONModel) {
         "use strict";
 
-        return Controller.extend("hipt.hipt.controller.Project", {
+        return Controller.extend("hipt.hipt.controller.ProjectOverview", {
             onInit: function () {
 
-                const jsonArr = {"phaseArr": ""}
-                const abc = Object.entries(jsonArr)
-                var oModel = new JSONModel();
-                this.getView().setModel(oModel, "customer");
+
 
             }
         });

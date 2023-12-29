@@ -5,5 +5,7 @@
     controllerName="hipt.hipt.controller.Project"
     displayBlock="true"
 >
-    <Shell id="Project" />
+    <Shell id="ProjectOverview">
+        <Button id="thisBtn" />
+    </Shell>
 </mvc:View>
