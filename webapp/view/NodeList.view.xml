@@ -1,0 +1,25 @@
+<mvc:View
+    controllerName="hipt.hipt.controller.NodeList"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Panel id="NodeList">
+        <content>
+            <List
+                id="TaskList"
+                headerText="Products"
+                headerLevel="H2"
+                items="{
+			path: '/ProductCollection'
+		}"
+            >
+                <StandardListItem
+                    id="taskListItem"
+                    title="{Name}"
+                    counter="{Quantity}"
+                />
+            </List>
+        </content>
+    </Panel>
+</mvc:View>

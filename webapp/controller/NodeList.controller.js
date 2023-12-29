@@ -5,7 +5,7 @@ sap.ui.define(
     function (BaseController) {
         "use strict";
 
-        return BaseController.extend("hipt.hipt.controller.App", {
+        return BaseController.extend("hipt.hipt.controller.NodeList", {
             onInit: function () {
                 const jsonArr = { "123": "aaa", "234": 15, "099": 22 }
                 const abc = Object.entries(jsonArr)

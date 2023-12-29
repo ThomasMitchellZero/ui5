@@ -6,7 +6,9 @@
     xmlns="sap.m"
 >
     <Panel id="SubtaskCard">
+        <Button
+            id="PVtest"
+            text="CardCont"
+        />
     </Panel>
 </mvc:View>
-
-

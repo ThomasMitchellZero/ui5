@@ -2,10 +2,8 @@
     xmlns:html="http://www.w3.org/1999/xhtml"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
-    controllerName="hipt.hipt.controller.Project"
+    controllerName="hipt.hipt.controller.ProjectOverview"
     displayBlock="true"
 >
-    <Shell id="ProjectOverview">
-        <Button id="thisBtn" />
-    </Shell>
+    <Page id="ProjOverviewPage" />
 </mvc:View>
