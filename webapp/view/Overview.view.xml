@@ -1,0 +1,14 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="hipt.hipt.controller.App" displayBlock="true">
+    <Panel xmlns="sap.m" width="auto" expandable="true" expanded="true" id="panel0">
+        <headerToolbar>
+
+            
+        </headerToolbar>
+        <content>
+            <Text text="Panel Content" id="text2"/>
+            
+        </content>
+        </Panel>
+    <Shell id="Overview">
+    </Shell>
+</mvc:View>

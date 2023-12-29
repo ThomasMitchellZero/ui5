@@ -1,6 +1,6 @@
 <mvc:View
     xmlns:f="sap.f"
-    controllerName="hipt.hipt.controller.Project"
+    controllerName="hipt.hipt.controller.SubtaskCard"
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
     xmlns="sap.m"
