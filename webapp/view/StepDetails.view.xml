@@ -4,15 +4,19 @@
     displayBlock="true"
     xmlns="sap.m"
 >
-    <Panel id="StepDetails">
+    <Panel
+        id="StepDetails"
+        class="sapUiResponsiveMargin"
+        width="auto"
+    >
         <content>
             <List
                 id="TaskList"
                 headerText="Products"
                 headerLevel="H2"
                 items="{
-			path: '/ProductCollection'
-		}"
+			        path: '/ProductCollection'     
+		        }"
             >
                 <StandardListItem
                     id="taskListItem"
