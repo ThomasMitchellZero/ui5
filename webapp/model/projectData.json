@@ -1,51 +1,37 @@
 {
-    "meta": {
-        "phaseKey": "overview",
-        "phaseName": "Overview"
-    },
+    "stepKey": "overview",
+    "stepStr": "Overview",
     "phases": {
         "temporaryMigration": {
-            "meta": {
-                "phaseKey": "temporaryMigration",
-                "phaseName": "Temporary Migration"
-            },
-            "phases": {
+            "stepKey": "temporaryMigration",
+            "stepStr": "Temporary Migration",
+            "taskObj": {
                 "abc": {
-                    "meta": {
-                        "phaseKey": "abc",
-                        "phaseName": "Temporary Migration"
-                    },
-                    "phases": {}
+                    "stepKey": "abc",
+                    "stepStr": "Temporary Migration",
+                    "subtasks": {}
                 },
                 "defg": {
-                    "meta": {
-                        "phaseKey": "def",
-                        "phaseName": "Temporary Migration"
-                    },
-                    "phases": {}
+                    "stepKey": "def",
+                    "stepStr": "Temporary Migration",
+                    "subtasks": {}
                 },
                 "hijklm": {
-                    "meta": {
-                        "phaseKey": "abc",
-                        "phaseName": "Temporary Migration"
-                    },
-                    "phases": {}
+                    "stepKey": "abc",
+                    "stepStr": "Temporary Migration",
+                    "subtasks": {}
                 }
             }
         },
         "development": {
-            "meta": {
-                "phaseKey": "development",
-                "phaseName": "Development"
-            },
-            "phases": {}
+            "stepKey": "development",
+            "stepStr": "Development",
+            "taskObj": {}
         },
         "unittest": {
-            "meta": {
-                "phaseKey": "unittest",
-                "phaseName": "Unit Test With Client"
-            },
-            "phases": {}
+            "stepKey": "unittest",
+            "stepStr": "Unit Test With Client",
+            "taskObj": {}
         }
     }
 }

@@ -5,5 +5,7 @@
     controllerName="hipt.hipt.controller.ProjectOverview"
     displayBlock="true"
 >
-    <Page id="ProjOverviewPage" />
+    <Page id="ProjOverviewPage" > 
+    <content></content>
+    </Page>
 </mvc:View>
