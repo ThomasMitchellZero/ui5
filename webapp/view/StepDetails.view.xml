@@ -1,10 +1,10 @@
 <mvc:View
-    controllerName="hipt.hipt.controller.NodeList"
+    controllerName="hipt.hipt.controller.StepDetails"
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
     xmlns="sap.m"
 >
-    <Panel id="NodeList">
+    <Panel id="StepDetails">
         <content>
             <List
                 id="TaskList"
