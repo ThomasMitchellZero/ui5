@@ -3,11 +3,11 @@
  */
 
 sap.ui.define([
-        "sap/ui/core/UIComponent",
-        "sap/ui/Device",
-        "sap/ui/model/json/JSONModel"
+    "sap/ui/core/UIComponent",
+    "sap/ui/Device",
+    "sap/ui/model/json/JSONModel"
 
-    ],
+],
     function (UIComponent, Device, JSONModel) {
         "use strict";
 
@@ -21,6 +21,9 @@ sap.ui.define([
              * @public
              * @override
              */
+
+            navProps: { dong: "Long" },
+
             init: function () {
                 // call the base component's init function
                 UIComponent.prototype.init.apply(this, arguments);
@@ -28,10 +31,22 @@ sap.ui.define([
                 // enable routing
                 this.getRouter().initialize();
 
+                this.getRouter().attachEvent("routeMatched", {}, this.onRouteMatched, this)
+
+                const birb = "BRING"
+
+
+
                 // set the device model
                 var oDeviceModel = new JSONModel(Device);
                 oDeviceModel.setDefaultBindingMode("OneWay");
                 this.setModel(oDeviceModel, "device");
+
+            },
+
+            onRouteMatched: function (event) {
+                const routeParams = new JSONModel(event.getParameter("arguments") || {})
+                this.setModel(routeParams, "oRouteParams")
             }
         });
     }

@@ -5,7 +5,7 @@
         "temporaryMigration": {
             "stepKey": "temporaryMigration",
             "stepStr": "Temporary Migration",
-            "taskObj": {
+            "phaseTasks": {
                 "abc": {
                     "stepKey": "abc",
                     "stepStr": "Temporary Migration",
@@ -26,12 +26,12 @@
         "development": {
             "stepKey": "development",
             "stepStr": "Development",
-            "taskObj": {}
+            "phaseTasks": {}
         },
         "unittest": {
             "stepKey": "unittest",
             "stepStr": "Unit Test With Client",
-            "taskObj": {}
+            "phaseTasks": {}
         }
     }
 }

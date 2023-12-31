@@ -56,7 +56,6 @@
                 "type": "sap.ui.model.json.JSONModel",
                 "uri": "model/projectData.json"
             },
-
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": {
@@ -83,15 +82,29 @@
             },
             "routes": [
                 {
-                    "name": "RouteView1",
-                    "pattern": ":?query:",
+                    "name": "OverviewRt",
+                    "pattern": "placeholderDELETE",
                     "target": [
-                        "TargetView1"
+                        "projOverview"
+                    ]
+                },
+                {
+                    "name": "stepDetails",
+                    "pattern": ":?phaseTasks:/:?subtasks:",
+                    "target": [
+                        "projOverview"
                     ]
                 }
             ],
             "targets": {
-                "TargetView1": {
+                "projOverview": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "ProjectOverview",
+                    "viewName": "ProjectOverview"
+                },
+                "stepDetails": {
                     "viewType": "XML",
                     "transition": "slide",
                     "clearControlAggregation": false,
