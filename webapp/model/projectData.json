@@ -8,20 +8,25 @@
             "phaseTasks": {
                 "task313": {
                     "stepStr": "Task 313",
+                    "seqIndex": 100,
                     "subtasks": {
                         "subtask100": {
+                            "seqIndex": 100,
                             "stepStr": "Subtask 100"
                         },
                         "subtask110": {
+                            "seqIndex": 120,
                             "stepStr": "Subtask 110"
                         }
                     }
                 },
                 "task220": {
+                    "seqIndex": 150,
                     "stepStr": "Task 220",
                     "subtasks": {}
                 },
                 "task002": {
+                    "seqIndex": 150,
                     "stepStr": "Task 002",
                     "subtasks": {}
                 }
