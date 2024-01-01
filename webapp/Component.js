@@ -44,9 +44,12 @@ sap.ui.define([
             },
 
             onRouteMatched: function (event) {
-                const routeParams = new JSONModel(event.getParameter("arguments") || {})
-                routeParams.setDefaultBindingMode("OneWay");
-                this.setModel(routeParams, "oRouteParams")
+                const routeParams = event.getParameter("arguments") || {}
+                this.navProps = routeParams
+                this.setModel(new JSONModel(routeParams), "oRouteParams")
+
+                const stopper = ""
+
             }
         });
     }

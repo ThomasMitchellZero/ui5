@@ -14,14 +14,23 @@
                 id="TaskList"
                 headerText="Products"
                 headerLevel="H2"
-                items="{
-			        path: '/ProductCollection'     
-		        }"
+                items="{TestModel>/arr}"
             >
                 <StandardListItem
                     id="taskListItem"
-                    title="{Name}"
-                    counter="{Quantity}"
+                    title="{TestModel>n}"
+                />
+            </List>
+
+            <List
+                id="TaskList2"
+                headerText="Products"
+                headerLevel="H2"
+                items="{Step_Data>/stepsArr}"
+            >
+                <StandardListItem
+                    id="taskListItem2"
+                    title="{Step_Data>1/stepStr}"
                 />
             </List>
         </content>
