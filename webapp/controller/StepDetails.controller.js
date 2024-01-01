@@ -11,6 +11,8 @@ sap.ui.define(
                 const efasss = this.getOwnerComponent();
                 const oStepData = this.getOwnerComponent().getModel("progressObj").getData()
 
+                const aStepData = Object.entries(oStepData.phases)
+
                 const stopper = ""
             }
         });
