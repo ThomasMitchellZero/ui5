@@ -36,7 +36,6 @@ sap.ui.define([
                 const birb = "BRING"
 
 
-
                 // set the device model
                 var oDeviceModel = new JSONModel(Device);
                 oDeviceModel.setDefaultBindingMode("OneWay");
@@ -46,6 +45,7 @@ sap.ui.define([
 
             onRouteMatched: function (event) {
                 const routeParams = new JSONModel(event.getParameter("arguments") || {})
+                routeParams.setDefaultBindingMode("OneWay");
                 this.setModel(routeParams, "oRouteParams")
             }
         });

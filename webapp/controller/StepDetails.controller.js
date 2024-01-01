@@ -8,7 +8,10 @@ sap.ui.define(
         return BaseController.extend("hipt.hipt.controller.StepDetails", {
 
             onInit: function () {
+                const efasss = this.getOwnerComponent();
+                const oStepData = this.getOwnerComponent().getModel("progressObj").getData()
 
+                const stopper = ""
             }
         });
     }

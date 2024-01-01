@@ -1,0 +1,45 @@
+{
+    "stepKey": "overview",
+    "stepStr": "Overview",
+    "phases": [
+        {
+            "stepKey": "temporaryMigration",
+            "stepStr": "Temporary Migration",
+            "phaseTasks": [
+                {
+                    "stepKey": "zbc",
+                    "stepStr": "Temporary Migration",
+                    "subtasks": [
+                        {
+                            "stepKey": "333",
+                            "stepStr": "Test 333"
+                        }
+                    ]
+                },
+                {
+                    "stepKey": "def",
+                    "stepStr": "Temporary Migration",
+                    "subtasks": [                        {
+                        "stepKey": "444",
+                        "stepStr": "Test 444"
+                    }]
+                },
+                {
+                    "stepKey": "hijklm",
+                    "stepStr": "Temporary Migration",
+                    "subtasks": []
+                }
+            ]
+        },
+        {
+            "stepKey": "development",
+            "stepStr": "Development",
+            "phaseTasks": []
+        },
+        {
+            "stepKey": "unittest",
+            "stepStr": "Unit Test With Client",
+            "phaseTasks": []
+        }
+    ]
+}

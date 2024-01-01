@@ -52,7 +52,7 @@
             "cozy": true
         },
         "models": {
-            "": {
+            "progressObj": {
                 "type": "sap.ui.model.json.JSONModel",
                 "uri": "model/projectData.json"
             },

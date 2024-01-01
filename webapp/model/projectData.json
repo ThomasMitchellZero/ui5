@@ -3,34 +3,38 @@
     "stepStr": "Overview",
     "phases": {
         "temporaryMigration": {
-            "stepKey": "temporaryMigration",
             "stepStr": "Temporary Migration",
+            "seqIndex": 100,
             "phaseTasks": {
-                "abc": {
-                    "stepKey": "abc",
-                    "stepStr": "Temporary Migration",
+                "task313": {
+                    "stepStr": "Task 313",
+                    "subtasks": {
+                        "subtask100": {
+                            "stepStr": "Subtask 100"
+                        },
+                        "subtask110": {
+                            "stepStr": "Subtask 110"
+                        }
+                    }
+                },
+                "task220": {
+                    "stepStr": "Task 220",
                     "subtasks": {}
                 },
-                "defg": {
-                    "stepKey": "def",
-                    "stepStr": "Temporary Migration",
-                    "subtasks": {}
-                },
-                "hijklm": {
-                    "stepKey": "abc",
-                    "stepStr": "Temporary Migration",
+                "task002": {
+                    "stepStr": "Task 002",
                     "subtasks": {}
                 }
             }
         },
         "development": {
-            "stepKey": "development",
             "stepStr": "Development",
+            "seqIndex": 150,
             "phaseTasks": {}
         },
         "unittest": {
-            "stepKey": "unittest",
             "stepStr": "Unit Test With Client",
+            "seqIndex": 200,
             "phaseTasks": {}
         }
     }
