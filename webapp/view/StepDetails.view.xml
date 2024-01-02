@@ -24,13 +24,13 @@
 
             <List
                 id="TaskList2"
-                headerText="Products"
+                headerText="{ActiveScope>/stepStr}"
                 headerLevel="H2"
-                items="{Step_Data>/stepsArr}"
+                items="{ActiveScope>/aSteps}"
             >
                 <StandardListItem
                     id="taskListItem2"
-                    title="{Step_Data>1/stepStr}"
+                    title="{ActiveScope>1/stepStr}"
                 />
             </List>
         </content>

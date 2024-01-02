@@ -90,7 +90,7 @@
                 },
                 {
                     "name": "stepDetails",
-                    "pattern": ":?phaseTasks:/:?subtasks:",
+                    "pattern": ":?phase:/:?task:/:?subtask:",
                     "target": [
                         "projOverview"
                     ]

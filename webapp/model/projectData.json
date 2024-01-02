@@ -5,7 +5,7 @@
         "temporaryMigration": {
             "stepStr": "Temporary Migration",
             "seqIndex": 100,
-            "phaseTasks": {
+            "tasks": {
                 "task313": {
                     "stepStr": "Task 313",
                     "seqIndex": 100,
@@ -37,7 +37,7 @@
             "seqIndex": 150,
             "phaseTasks": {}
         },
-        "unittest": {
+        "unitTest": {
             "stepStr": "Unit Test With Client",
             "seqIndex": 200,
             "phaseTasks": {}
