@@ -11,24 +11,12 @@
     >
         <content>
             <List
-                id="TaskList"
-                headerText="Products"
-                headerLevel="H2"
-                items="{TestModel>/arr}"
-            >
-                <StandardListItem
-                    id="taskListItem"
-                    title="{TestModel>n}"
-                />
-            </List>
-
-            <List
                 id="TaskList2"
                 headerText="{ActiveScope>/stepStr}"
                 headerLevel="H2"
                 items="{ActiveScope>/aSteps}"
             >
-                <StandardListItem
+                <ObjectListItem
                     id="taskListItem2"
                     title="{ActiveScope>1/stepStr}"
                 />

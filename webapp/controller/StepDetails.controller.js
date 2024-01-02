@@ -34,26 +34,17 @@ sap.ui.define(
 
                 this.getView().setModel(new JSONModel(oActiveScope), "ActiveScope")
 
-
-
-
-
-
-                const testObj = {
-                    arr: [{ n: "a" }, { n: "b" }, { n: "c" }]
-                }
-
-                const testModel = new JSONModel(testObj)
-
-                this.getView().setModel(testModel, "TestModel")
-
-                const stopper = ""
+                
+                const stopper = "farrt"
 
                 /*
                 
-                ?phaseTasks: undefined
-                ?subtasks: undefined
+
                 */
+            },
+
+            onStepClick: function(){
+
             }
         });
     }
