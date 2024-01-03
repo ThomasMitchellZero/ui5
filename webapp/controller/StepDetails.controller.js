@@ -61,7 +61,11 @@ sap.ui.define(
             onStepClick: function (oEvent) {
                 const oRouter = this.getOwnerComponent().getRouter();
                 const oData = oEvent.getSource().getBindingContext("ActiveScope").getObject()
-                oRouter.navigate()
+                oRouter.navTo(
+                    "stepDetails", {
+                        
+                    }
+                )
 
 
 
