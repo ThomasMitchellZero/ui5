@@ -10,10 +10,13 @@ sap.ui.define(
 
             onInit: function () {
 
-                const oRouteArgs = this.getOwnerComponent().navProps
-                const sPhaseKey = oRouteArgs["?phase"]
-                const sTaskKey = oRouteArgs["?task"]
-                const sSubtaskKey = oRouteArgs["?subtask"]
+
+                const rtArgs = this.getOwnerComponent().navProps.arguments
+                const sRoutName = this.getOwnerComponent().navProps.routeName || "ProjectDetails"
+
+                const sPhaseKey = rtArgs?.["?phase"]
+                const sTaskKey = rtArgs?.["?task"]
+                const sSubtaskKey = rtArgs?.["?subtask"]
 
 
                 // Possible scopes for StepDetails
@@ -30,6 +33,23 @@ sap.ui.define(
                     { rt: oProject, step: "project", substep: "phases" },
                 ]
 
+                const oScopeInfo = {
+                    ProjectDetails: {
+                        oDataSrc: oProject,
+                        substep: "phases"
+                    },
+                    PhaseDetails: {
+                        oDataSrc: oProject?.phases?.[sPhaseKey],
+                        substep: "tasks"
+                    },
+                    TaskDetails: {
+                        oDataSrc: oProject?.phases?.[sPhaseKey]?.tasks?.[sTaskKey],
+                        substep: "subtasks"
+                    },
+                }
+
+
+
                 let sActiveScopeLevel = ""
 
                 const _setActiveScope = () => {
@@ -45,7 +65,10 @@ sap.ui.define(
                     return output
                 }
 
-                const oActiveScope = _setActiveScope()
+                //const oActiveScope = _setActiveScope()
+                const targScopeInfo = oScopeInfo[sRoutName]
+                const oActiveScope = targScopeInfo.oDataSrc
+                oActiveScope.aSteps = Object.entries(oActiveScope[targScopeInfo.substep])
 
                 this.getView().setModel(new JSONModel(oActiveScope), "ActiveScope")
 
@@ -63,8 +86,8 @@ sap.ui.define(
                 const oData = oEvent.getSource().getBindingContext("ActiveScope").getObject()
                 oRouter.navTo(
                     "stepDetails", {
-                        
-                    }
+
+                }
                 )
 
 
