@@ -11,8 +11,9 @@ sap.ui.define(
             onInit: function () {
 
                 const ownerComp = this.getOwnerComponent()
-                const rtArgs = this.getOwnerComponent().navProps.arguments
-                const sRoutName = this.getOwnerComponent().navProps.routeName || "ProjectDetails"
+                const rtArgs = ownerComp.navProps.arguments
+                const sRoutName = ownerComp.navProps.routeName || "ProjectDetails"
+                const oProject = ownerComp.getModel("progressObj").getData()
 
                 const sPhaseKey = rtArgs?.["?phase"]
                 const sTaskKey = rtArgs?.["?task"]
@@ -20,8 +21,6 @@ sap.ui.define(
 
 
                 // Possible scopes for StepDetails
-                const oProject = this.getOwnerComponent().getModel("progressObj").getData()
-
                 const oScopeInfo = {
                     ProjectDetails: {
                         oDataSrc: oProject,
