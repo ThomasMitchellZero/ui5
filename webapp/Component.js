@@ -23,7 +23,7 @@ sap.ui.define([
              * @override
              */
 
-            navProps: { dong: "Long" },
+            navProps: {},
 
             init: function () {
                 // call the base component's init function
@@ -35,6 +35,8 @@ sap.ui.define([
                 this.getRouter().attachEvent("routeMatched", {}, this.onRouteMatched, this)
 
                 const birb = "BRING"
+
+                
 
 
                 // set the device model

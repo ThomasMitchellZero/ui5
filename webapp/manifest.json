@@ -90,20 +90,21 @@
                 },
                 {
                     "name": "ProjectDetails",
-                    "pattern": "/project",
+                    "pattern": "project",
                     "target": [
                         "projOverview"
                     ]
                 },
                 {
                     "name": "PhaseDetails",
-                    "pattern": "project/{?phase}",
+                    "pattern": "project/phases/{phases}",
                     "target": [
                         "phaseDetails"
                     ]
                 }
             ],
             "targets": {
+                
                 "projOverview": {
                     "viewType": "XML",
                     "transition": "slide",
@@ -116,9 +117,10 @@
                     "viewType": "XML",
                     "transition": "slide",
                     "clearControlAggregation": false,
-                    "viewId": "ProjectOverview",
-                    "viewName": "ProjectOverview",
+                    "viewId": "PhaseDetails",
+                    "viewName": "PhaseDetails",
                     "viewLevel": 2
+                    
                 }
             }
         },

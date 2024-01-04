@@ -11,38 +11,44 @@ sap.ui.define(
             onInit: function () {
 
                 const ownerComp = this.getOwnerComponent()
-                const rtArgs = ownerComp.navProps.arguments
-                const sRoutName = ownerComp.navProps.routeName || "ProjectDetails"
+                const rtArgs = ownerComp.navProps.arguments || {}
+                const sActiveRtName = ownerComp.navProps.routeName || "ProjectDetails"
                 const oProject = ownerComp.getModel("progressObj").getData()
 
-                const sPhaseKey = rtArgs?.["?phase"]
-                const sTaskKey = rtArgs?.["?task"]
-                const sSubtaskKey = rtArgs?.["?subtask"]
+                
 
+                const hash = window.location.hash.replace("#/project/", "")
 
-                // Possible scopes for StepDetails
-                const oScopeInfo = {
+                const aScopRt = hash? hash.split("/") : []
+
+                let oActiveScope = oProject
+                aScopRt.forEach((segmentStr) => {
+                    oActiveScope = oActiveScope?.[segmentStr]
+                })
+
+                const oTargetInfo = {
                     ProjectDetails: {
-                        oDataSrc: oProject,
-                        substep: "phases"
+                        childStepKey: "phases",
+                        substepTarget: "PhaseDetails",
                     },
                     PhaseDetails: {
-                        oDataSrc: oProject?.phases?.[sPhaseKey],
-                        substep: "tasks"
+                        childStepKey: "tasks",
+                        substepTarget: "TaskDetails"
                     },
                     TaskDetails: {
-                        oDataSrc: oProject?.phases?.[sPhaseKey]?.tasks?.[sTaskKey],
-                        substep: "subtasks"
-                    },
+                        childStepKey: "subtasks",
+                        substepTarget: "SubtaskDetails"
+                    }
                 }
 
-                //const oActiveScope = _setActiveScope()
-                const targScopeInfo = oScopeInfo[sRoutName]
-                const oActiveScope = targScopeInfo.oDataSrc
-                oActiveScope.aSteps = Object.entries(oActiveScope[targScopeInfo.substep])
+                const oChildInfo = oTargetInfo[sActiveRtName]
+
+                oActiveScope.aSteps = Object.entries(oActiveScope[oChildInfo.childStepKey])
+
+                this.rtArgs = rtArgs
+                this.oChildInfo = oChildInfo
 
                 this.getView().setModel(new JSONModel(oActiveScope), "ActiveScope")
-
 
                 const stopper = "farrt"
 
@@ -54,10 +60,16 @@ sap.ui.define(
 
             onStepClick: function (oEvent) {
                 const oRouter = this.getOwnerComponent().getRouter();
-                const oData = oEvent.getSource().getBindingContext("ActiveScope").getObject()
+                const oEventData = oEvent.getSource().getBindingContext("ActiveScope").getObject()
+                const sEventKey = oEventData[0]
+                const sNewStepLevel = this.oChildInfo.childStepKey
+                const sNavTarget = this.oChildInfo.substepTarget
+
+                const newRoutArgs = this.rtArgs
+                newRoutArgs[sNewStepLevel] = sEventKey
+
                 oRouter.navTo(
-                    "stepDetails", {
-                }
+                    sNavTarget, newRoutArgs
                 )
 
 

@@ -35,12 +35,12 @@
         "development": {
             "stepStr": "Development",
             "seqIndex": 150,
-            "phaseTasks": {}
+            "tasks": {}
         },
         "unitTest": {
             "stepStr": "Unit Test With Client",
             "seqIndex": 200,
-            "phaseTasks": {}
+            "tasks": {}
         }
     }
 }
