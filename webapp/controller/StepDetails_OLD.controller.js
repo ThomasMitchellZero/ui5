@@ -10,19 +10,7 @@ sap.ui.define(
 
             onInit: function () {
 
-
-
-
-                /*
-                
-                
-                */
-
-
-
-                /*
-
-                                this.getRouter().attachEvent("routeMatched", {}, this.onRouteMatched, this)
+                this.getRouter().attachEvent("routeMatched", {}, this.onRouteMatched, this)
 
                 const ownerComp = this.getOwnerComponent()
                 const rtArgs = ownerComp.navProps.arguments || {}
@@ -65,13 +53,15 @@ sap.ui.define(
                 this.getView().setModel(new JSONModel(oActiveScope), "ActiveScope")
 
                 const stopper = "farrt"
+
+                /*
                 
 
                 */
             },
 
             onRouteMatched: function(event){
-
+                
             },
 
             onStepClick: function (oEvent) {

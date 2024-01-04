@@ -32,11 +32,11 @@ sap.ui.define([
                 // enable routing
                 this.getRouter().initialize();
 
-                this.getRouter().attachEvent("routeMatched", {}, this.onRouteMatched, this)
+                //this.getRouter().attachEvent("routeMatched", {}, this.onRouteMatched, this)
 
                 const birb = "BRING"
 
-                
+
 
 
                 // set the device model

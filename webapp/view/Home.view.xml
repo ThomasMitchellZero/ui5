@@ -1,0 +1,13 @@
+<mvc:View
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="hipt.hipt.controller.Home"
+    displayBlock="true"
+>
+    <Page id="Home">
+        <content>
+            <Button id="homeButton" press="onHomeClick" text="Enter Project"/>
+        </content>
+    </Page>
+</mvc:View>
