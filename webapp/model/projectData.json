@@ -1,45 +1,82 @@
 {
     "stepKey": "overview",
     "stepStr": "Project Overview",
+    "completion": {
+        "complete": 32,
+        "inProgress": 44,
+        "total": 128
+    },
     "phases": {
         "temporaryMigration": {
             "stepStr": "Temporary Migration",
-            "seqIndex": 100,
+            "completion": {
+                "complete": 9,
+                "inProgress": 12,
+                "total": 33
+            },
             "tasks": {
                 "task313": {
                     "stepStr": "Task 313",
-                    "seqIndex": 100,
+                    "completion": {
+                        "complete": 3,
+                        "inProgress": 4,
+                        "total": 11
+                    },
                     "subtasks": {
                         "subtask100": {
-                            "seqIndex": 100,
-                            "stepStr": "Subtask 100"
+                            "stepStr": "Subtask 100",
+                            "completion": {
+                                "complete": 1,
+                                "inProgress": 2,
+                                "total": 5
+                            }
                         },
                         "subtask110": {
-                            "seqIndex": 120,
-                            "stepStr": "Subtask 110"
+                            "stepStr": "Subtask 110",
+                            "completion": {
+                                "complete": 2,
+                                "inProgress": 2,
+                                "total": 6
+                            }
                         }
                     }
                 },
                 "task220": {
-                    "seqIndex": 150,
                     "stepStr": "Task 220",
+                    "completion": {
+                        "complete": 4,
+                        "inProgress": 5,
+                        "total": 12
+                    },
                     "subtasks": {}
                 },
                 "task002": {
-                    "seqIndex": 150,
                     "stepStr": "Task 002",
+                    "completion": {
+                        "complete": 2,
+                        "inProgress": 3,
+                        "total": 10
+                    },
                     "subtasks": {}
                 }
             }
         },
         "development": {
             "stepStr": "Development",
-            "seqIndex": 150,
+            "completion": {
+                "complete": 20,
+                "inProgress": 24,
+                "total": 66
+            },
             "tasks": {}
         },
         "unitTest": {
             "stepStr": "Unit Test With Client",
-            "seqIndex": 200,
+            "completion": {
+                "complete": 8,
+                "inProgress": 11,
+                "total": 32
+            },
             "tasks": {}
         }
     }

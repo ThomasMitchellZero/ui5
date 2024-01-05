@@ -6,10 +6,9 @@
 sap.ui.define([
     "sap/ui/core/UIComponent",
     "sap/ui/Device",
-    "sap/ui/model/json/JSONModel"
-
+    "sap/ui/model/json/JSONModel",
 ],
-    function (UIComponent, Device, JSONModel) {
+    function (UIComponent, Device, JSONModel, ) {
         "use strict";
 
         return UIComponent.extend("hipt.hipt.Component", {
@@ -45,6 +44,13 @@ sap.ui.define([
                 this.setModel(oDeviceModel, "device");
 
             },
+
+            _TotalProjectCompletion: function(){
+
+            },
+
+
+            
 
             /*
             

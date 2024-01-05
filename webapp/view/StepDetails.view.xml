@@ -24,6 +24,11 @@
                             title="{ActiveScope>1/stepStr}"
                             press=".onStepClick"
                             type="Navigation"
+                            counter="42"
+                            icon="sap-icon://electrocardiogram"
+                            intro="intro text"
+                            number="007"
+                            numberState="None"
                         />
                     </List>
                 </content>

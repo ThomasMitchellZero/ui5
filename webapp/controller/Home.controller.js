@@ -7,6 +7,8 @@ sap.ui.define(
 
         return BaseController.extend("hipt.hipt.controller.Home", {
             onInit: function () {
+
+
             },
 
             onHomeClick: function () {

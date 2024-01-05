@@ -7,6 +7,10 @@ sap.ui.define(
   
       return BaseController.extend("hipt.hipt.controller.App", {
         onInit: function() {
+
+        //const modelWithNums = this.getOwnerComponent().getModel("progressObj").getData()
+
+        const stopper =""
         }
       });
     }
