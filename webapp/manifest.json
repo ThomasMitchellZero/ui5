@@ -91,16 +91,17 @@
                 {
                     "name": "ProjectDetails",
                     "pattern": "project",
-                    "target": [
-                        "projOverview"
-                    ]
+                    "target": "projOverview"
                 },
                 {
                     "name": "PhaseDetails",
                     "pattern": "project/phases/{phases}",
-                    "target": [
-                        "phaseDetails"
-                    ]
+                    "target": "phaseDetails"
+                },
+                {
+                    "name": "TaskDetails",
+                    "pattern": "project/phases/{phases}/tasks/{tasks}",
+                    "target": "taskDetails"
                 }
             ],
             "targets": {
@@ -112,23 +113,29 @@
                     "viewName": "Home",
                     "viewLevel": 1
                 },
-
                 "projOverview": {
                     "viewType": "XML",
                     "transition": "slide",
                     "clearControlAggregation": false,
-                    "viewId": "ProjectOverview",
-                    "viewName": "ProjectOverview",
+                    "viewId": "StepDetails",
+                    "viewName": "StepDetails",
                     "viewLevel": 1
                 },
                 "phaseDetails": {
                     "viewType": "XML",
                     "transition": "slide",
                     "clearControlAggregation": false,
-                    "viewId": "PhaseDetails",
-                    "viewName": "PhaseDetails",
+                    "viewId": "StepDetails",
+                    "viewName": "StepDetails",
                     "viewLevel": 2
-                    
+                },
+                "taskDetails": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "StepDetails",
+                    "viewName": "StepDetails",
+                    "viewLevel": 3
                 }
             }
         },

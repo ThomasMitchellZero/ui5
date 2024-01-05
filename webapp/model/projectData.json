@@ -1,6 +1,6 @@
 {
     "stepKey": "overview",
-    "stepStr": "Overview",
+    "stepStr": "Project Overview",
     "phases": {
         "temporaryMigration": {
             "stepStr": "Temporary Migration",

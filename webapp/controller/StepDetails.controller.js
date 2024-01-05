@@ -1,6 +1,6 @@
 sap.ui.define(
     [
-        "sap/ui/core/mvc/Controller", "sap/ui/model/json/JSONModel", "./StepDetailBase.controller"
+        "sap/ui/core/mvc/Controller", "sap/ui/model/json/JSONModel",
     ],
     function (BaseController, JSONModel, StepDetailBase) {
         //"What are you doing, Step-Detail?"
@@ -8,20 +8,9 @@ sap.ui.define(
 
         return BaseController.extend("hipt.hipt.controller.StepDetails", {
 
-            stepParameters: {},
-
-
 
             onInit: function () {
                 this.getOwnerComponent().getRouter().attachEvent("routePatternMatched", {}, this.onRoutePatternMatched, this)
-
-
-
-
-                /*
-                
-                
-                */
 
                 const stopper = "stop"
             },
@@ -73,9 +62,7 @@ sap.ui.define(
 
                 // create the function to handle navigation.
 
-
-
-
+                const stopper = "stop"
             },
 
             onStepClick: function (oEvent) {
@@ -95,7 +82,7 @@ sap.ui.define(
 
 
 
-                const stopper = "farrt"
+                const stopper = "stop"
 
             }
 

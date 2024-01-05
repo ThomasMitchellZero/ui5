@@ -1,28 +1,33 @@
 <mvc:View
     controllerName="hipt.hipt.controller.StepDetails"
+    xmlns:html="http://www.w3.org/1999/xhtml"
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
     xmlns="sap.m"
 >
-    <Panel
-        id="StepDetails"
-        class="sapUiResponsiveMargin"
-        width="auto"
-    >
+    <Page id="StepDetails">
         <content>
-            <List
-                id="TaskList2"
-                headerText="{ActiveScope>/stepStr}"
-                headerLevel="H2"
-                items="{ActiveScope>/aSteps}"
+            <Panel
+                id="StepDetailsPanel"
+                class="sapUiResponsiveMargin"
+                width="auto"
             >
-                <ObjectListItem
-                    id="taskListItem2"
-                    title="{ActiveScope>1/stepStr}"
-                    press="onStepClick"
-                    type="Navigation"
-                />
-            </List>
+                <content>
+                    <List
+                        id="TaskList2"
+                        headerText="{ActiveScope>/stepStr}"
+                        headerLevel="H2"
+                        items="{ActiveScope>/aSteps}"
+                    >
+                        <ObjectListItem
+                            id="taskListItem2"
+                            title="{ActiveScope>1/stepStr}"
+                            press="onStepClick"
+                            type="Navigation"
+                        />
+                    </List>
+                </content>
+            </Panel>
         </content>
-    </Panel>
+    </Page>
 </mvc:View>
