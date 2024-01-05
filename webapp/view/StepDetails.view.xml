@@ -19,7 +19,7 @@
                 <ObjectListItem
                     id="taskListItem2"
                     title="{ActiveScope>1/stepStr}"
-                    press=".onStepClick"
+                    press="onStepClick"
                     type="Navigation"
                 />
             </List>

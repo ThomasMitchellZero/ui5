@@ -46,17 +46,10 @@ sap.ui.define([
 
             },
 
-            onRouteMatched: function (event) {
-                // const routeParams = event.getParameter("arguments") || {}
-                // const routeName = event.getParameter("name")
-                this.navProps = {
-                    arguments: event.getParameter("arguments") || {}, 
-                    routeName: event.getParameter("name") || {},
-                }
+            /*
+            
+            */
 
-                const stopper = ""
-
-            }
         });
     }
 );
