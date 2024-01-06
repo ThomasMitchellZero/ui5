@@ -2,33 +2,33 @@
     "stepKey": "overview",
     "stepStr": "Project Overview",
     "completion": {
-        "complete": 32,
-        "inProgress": 44,
-        "total": 128
+        "complete": 320,
+        "inProgress": 440,
+        "total": 1280
     },
     "phases": {
         "temporaryMigration": {
             "stepStr": "Temporary Migration",
             "completion": {
-                "complete": 9,
-                "inProgress": 12,
-                "total": 33
+                "complete": 90,
+                "inProgress": 67,
+                "total": 85
             },
             "tasks": {
                 "task313": {
                     "stepStr": "Task 313",
                     "completion": {
-                        "complete": 3,
+                        "complete": 13,
                         "inProgress": 4,
-                        "total": 11
+                        "total": 39
                     },
                     "subtasks": {
                         "subtask100": {
                             "stepStr": "Subtask 100",
                             "completion": {
-                                "complete": 1,
-                                "inProgress": 2,
-                                "total": 5
+                                "complete": 3,
+                                "inProgress": 3,
+                                "total": 11
                             }
                         },
                         "subtask110": {
@@ -44,18 +44,18 @@
                 "task220": {
                     "stepStr": "Task 220",
                     "completion": {
-                        "complete": 4,
-                        "inProgress": 5,
-                        "total": 12
+                        "complete": 8,
+                        "inProgress": 7,
+                        "total": 44
                     },
                     "subtasks": {}
                 },
                 "task002": {
                     "stepStr": "Task 002",
                     "completion": {
-                        "complete": 2,
-                        "inProgress": 3,
-                        "total": 10
+                        "complete": 15,
+                        "inProgress": 0,
+                        "total": 15
                     },
                     "subtasks": {}
                 }
@@ -64,8 +64,8 @@
         "development": {
             "stepStr": "Development",
             "completion": {
-                "complete": 20,
-                "inProgress": 24,
+                "complete": 66,
+                "inProgress": 0,
                 "total": 66
             },
             "tasks": {}
@@ -73,9 +73,9 @@
         "unitTest": {
             "stepStr": "Unit Test With Client",
             "completion": {
-                "complete": 8,
-                "inProgress": 11,
-                "total": 32
+                "complete": 0,
+                "inProgress": 0,
+                "total": 95
             },
             "tasks": {}
         }

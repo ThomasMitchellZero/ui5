@@ -1,8 +1,8 @@
 sap.ui.define(
     [
-        "sap/ui/core/mvc/Controller", "sap/ui/model/json/JSONModel",
+        "sap/ui/core/mvc/Controller", "sap/ui/model/json/JSONModel", "hipt/hipt/controller/_sharedFunctions"
     ],
-    function (BaseController, JSONModel, StepDetailBase) {
+    function (BaseController, JSONModel, sharedFns) {
         //"What are you doing, Step-Detail?"
         "use strict";
 
@@ -16,6 +16,10 @@ sap.ui.define(
             },
 
             onRoutePatternMatched: function (event) {
+
+                // shared functions
+
+                const fParseStepObj = sharedFns.parseStepObj
 
                 const evtArguments = event.getParameter("arguments") || {}
                 const evtRouteName = event.getParameter("name") || "ProjectDetails"
@@ -51,7 +55,11 @@ sap.ui.define(
                 }
 
                 const oChildInfo = oTargetInfo[evtRouteName]
-                oActiveScope.aSteps = Object.entries(oActiveScope[oChildInfo.childStepKey])
+                oActiveScope.aSteps = Object.entries(oActiveScope[oChildInfo.childStepKey] || [])
+                for (const entry of oActiveScope.aSteps){
+                    //entry[1].stepStatus = fParseStepObj(entry)
+                    entry[1] = {...entry[1], ...fParseStepObj(entry)}
+                }
 
                 this.evtArguments = evtArguments
                 this.oChildInfo = oChildInfo

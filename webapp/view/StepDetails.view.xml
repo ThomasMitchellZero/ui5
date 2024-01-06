@@ -26,7 +26,7 @@
                             type="Navigation"
                             counter="42"
                             icon="sap-icon://electrocardiogram"
-                            intro="intro text"
+                            intro="{ActiveScope>1/sStatus}"
                             number="007"
                             numberState="None"
                         />
