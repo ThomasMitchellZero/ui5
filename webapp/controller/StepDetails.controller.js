@@ -57,7 +57,6 @@ sap.ui.define(
                 const oChildInfo = oTargetInfo[evtRouteName]
                 oActiveScope.aSteps = Object.entries(oActiveScope[oChildInfo.childStepKey] || [])
                 for (const entry of oActiveScope.aSteps){
-                    //entry[1].stepStatus = fParseStepObj(entry)
                     entry[1] = {...entry[1], ...fParseStepObj(entry)}
                 }
 

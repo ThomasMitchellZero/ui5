@@ -24,11 +24,15 @@
                             title="{ActiveScope>1/stepStr}"
                             press=".onStepClick"
                             type="Navigation"
-                            counter="42"
-                            icon="sap-icon://electrocardiogram"
+                            icon="{
+                                path: 'ActiveScope>1/icon'
+                            }"
                             intro="{ActiveScope>1/sStatus}"
-                            number="007"
-                            numberState="None"
+
+                            number="{
+                                path: 'ActiveScope>1/fraction'
+                            }"
+                            numberState="{ActiveScope>1/sStatus}"
                         />
                     </List>
                 </content>
