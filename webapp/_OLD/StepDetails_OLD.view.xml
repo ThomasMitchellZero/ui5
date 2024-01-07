@@ -23,7 +23,6 @@
                 >
                     <columns>
                         <Column
-                            
                             id="cIcon"
                             width="3rem"
                         >
@@ -93,7 +92,41 @@
                     </items>
                 </Table>
             </Panel>
-            
+            <Panel
+                id="StepDetailsPanel"
+                class="sapUiResponsiveMargin"
+                width="auto"
+            >
+                <content>
+                    <List
+                        id="TaskList2"
+                        headerText="{ActiveScope>/stepStr}"
+                        headerLevel="H2"
+                        items="{ActiveScope>/aSteps}"
+                    >
+                        <core:Icon
+                            id="ghahkj"
+                            src="{
+                                path: 'ActiveScope>1/icon'
+                            }"
+                        />
+                        <ObjectListItem
+                            id="taskListItem2"
+                            title="{ActiveScope>1/stepStr}"
+                            press=".onStepClick"
+                            type="Navigation"
+                            icon="{
+                                path: 'ActiveScope>1/icon'
+                            }"
+                            intro="{ActiveScope>1/sStatus}"
+                            number="{
+                                path: 'ActiveScope>1/fraction'
+                            }"
+                            numberState="{ActiveScope>1/sStatus}"
+                        />
+                    </List>
+                </content>
+            </Panel>
         </content>
     </Page>
 </mvc:View>

@@ -63,8 +63,6 @@ sap.ui.define(
                 this.evtArguments = evtArguments
                 this.oChildInfo = oChildInfo
 
-
-
                 this.getView().setModel(new JSONModel(oActiveScope), "ActiveScope")
 
                 // create the function to handle navigation.
