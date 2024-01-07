@@ -25,7 +25,8 @@ sap.ui.define(
                 const evtRouteName = event.getParameter("name") || "ProjectDetails"
 
                 const ownerComp = this.getOwnerComponent()
-                const oProject = ownerComp.getModel("progressObj").getData()
+                let oProject = ownerComp.getModel("progressObj").getData()
+
 
 
                 //parse the URL
@@ -38,6 +39,8 @@ sap.ui.define(
                 aScopeRtSegments.forEach((segmentStr) => {
                     oActiveScope = oActiveScope?.[segmentStr]
                 })
+
+                oActiveScope = { ...oActiveScope, ...fParseStepObj(oActiveScope) }
 
                 const oTargetInfo = {
                     ProjectDetails: {
@@ -56,8 +59,8 @@ sap.ui.define(
 
                 const oChildInfo = oTargetInfo[evtRouteName]
                 oActiveScope.aSteps = Object.entries(oActiveScope[oChildInfo.childStepKey] || [])
-                for (const entry of oActiveScope.aSteps){
-                    entry[1] = {...entry[1], ...fParseStepObj(entry)}
+                for (const entry of oActiveScope.aSteps) {
+                    entry[1] = { ...entry[1], ...fParseStepObj(entry) }
                 }
 
                 this.evtArguments = evtArguments

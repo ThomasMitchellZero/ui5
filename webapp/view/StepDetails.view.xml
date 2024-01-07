@@ -2,12 +2,51 @@
     controllerName="hipt.hipt.controller.StepDetails"
     xmlns:html="http://www.w3.org/1999/xhtml"
     xmlns:mvc="sap.ui.core.mvc"
+    xmlns:chart="sap.suite.ui.microchart"
     xmlns:core="sap.ui.core"
     displayBlock="true"
     xmlns="sap.m"
 >
-    <Page id="StepDetails">
+    <Page
+        id="StepDetails"
+        title="{ActiveScope>/stepStr}"
+    >
         <content>
+            <HBox
+                id="ChartHolder"
+                alignItems="Center"
+                alignContent="Start"
+                width="auto"
+                wrap="Wrap"
+                class="sapUiLargeMarginTopBottom sapUiLargeMarginLeftRight"
+            >
+                <chart:RadialMicroChart
+                    alignContent="Center"
+                    id="progressChart"
+                    percentage="{ActiveScope>/percentage}"
+                    valueColor="Good"
+                    size="L"
+                />
+                <VBox id="completionText">
+                    <Title
+                        id="ChartText"
+                        text="{
+                            parts: [ {path: 'ActiveScope>/stepStr'}, {value: 'Completion'}]
+                        }"
+                    />
+                    <ObjectNumber
+                        id="ProjDescription"
+                        number="{ActiveScope>/completion/complete}"
+                        class="sapMObjectNumberLarge"
+                        state="Success"
+                        emphasized="true"
+                        unit="{
+                            parts: [{value: '/'}, {path: 'ActiveScope>/completion/total'}]
+                        }"
+                    />
+                </VBox>
+            </HBox>
+
             <Panel
                 id="StepDetailsPanel1"
                 class="sapUiResponsiveMargin"
@@ -23,30 +62,33 @@
                 >
                     <columns>
                         <Column
-                            
                             id="cIcon"
                             width="3rem"
+                            class="sapUiHideOnPhone"
                         >
                             <Text
                                 id="tName"
                                 text="Info"
                             />
                         </Column>
-                        <Column id="cName">
+                        <Column
+                            id="cName"
+                            minScreenWidth="Tablet"
+                            demandPopin="true"
+                        >
                             <header />
                         </Column>
                         <Column
                             id="cCompletion"
                             hAlign="Begin"
-                            minScreenWidth="Desktop"
+                            minScreenWidth="Tablet"
                             demandPopin="true"
-                            popinDisplay="WithoutHeader"
                             width="20%"
                         >
                             <header>
                                 <Text
                                     id="tCompletion"
-                                    text="Fart"
+                                    text="Completion"
                                 />
                             </header>
                         </Column>
@@ -93,7 +135,6 @@
                     </items>
                 </Table>
             </Panel>
-            
         </content>
     </Page>
 </mvc:View>

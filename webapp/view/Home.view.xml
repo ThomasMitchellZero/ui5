@@ -5,9 +5,22 @@
     controllerName="hipt.hipt.controller.Home"
     displayBlock="true"
 >
-    <Page id="Home">
+    <Page
+        id="Home"
+        class="sapUiSizeCozy"
+        
+    >
         <content>
-            <Button id="homeButton" press="onHomeClick" text="Enter Project"/>
+            
+                <Button
+                    id="homeButton"
+                    press="onHomeClick"
+                    text="Enter Project"
+                    class="sapUiSizeCozy"
+                    width="12rem"
+                    
+                />
+
         </content>
     </Page>
 </mvc:View>

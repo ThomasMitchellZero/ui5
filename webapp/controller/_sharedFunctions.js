@@ -71,7 +71,9 @@ sap.ui.core.IconColor.Positive
 
 
             let oStepStatus = {
-                fraction: `${oCompletion.complete} / ${oCompletion.total}`
+                fraction: `${oCompletion.complete} / ${oCompletion.total}`,
+                percentage: (oCompletion.complete / oCompletion.total * 100) || 0
+
             }
 
             if (oCompletion?.failure) { oStepStatus.sStatus = "Error" } // Something failed
