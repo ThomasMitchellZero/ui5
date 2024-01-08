@@ -61,22 +61,18 @@
                     width="auto"
                 >
                     <columns>
-                        <Column
-                            id="cIcon"
-                            width="3rem"
-                            class="sapUiHideOnPhone"
-                        >
-                            <Text
-                                id="tName"
-                                text="Info"
-                            />
-                        </Column>
+
                         <Column
                             id="cName"
                             minScreenWidth="Tablet"
                             demandPopin="true"
                         >
-                            <header />
+                            <header>
+                                <Text
+                                    id="tName"
+                                    text="Info"
+                                />
+                            </header>
                         </Column>
                         <Column
                             id="cCompletion"
@@ -101,12 +97,6 @@
                             press=".onStepClick"
                         >
                             <cells>
-                                <core:Icon
-                                    id="cellStatusIcon"
-                                    color="Information"
-                                    size="1.5rem"
-                                    src="{ActiveScope>1/icon}"
-                                />
                                 <VBox
                                     id="stepInfo"
                                     class="sapUiSmallMarginTopBottom"
@@ -114,12 +104,13 @@
                                     <ObjectNumber
                                         id="cellObjTitle"
                                         number="{ActiveScope>1/stepStr}"
-                                        class="sapMObjectNumberLarge"
+                                        class="sapMObjectNumberLarge sapUiTinyMarginBottom"
                                     />
                                     <ObjectStatus
                                         id="stepStatus"
                                         text="{ActiveScope>1/title}"
                                         state="{ActiveScope>1/sStatus}"
+                                        icon="{ActiveScope>1/icon}"
                                     />
                                 </VBox>
                                 <VBox id="completionNums">

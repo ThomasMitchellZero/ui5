@@ -7,12 +7,12 @@
         "total": 1280
     },
     "phases": {
-        "temporaryMigration": {
+        "Discover": {
             "stepStr": "Temporary Migration",
             "completion": {
                 "complete": 90,
                 "inProgress": 67,
-                "total": 85
+                "total": 185
             },
             "tasks": {
                 "task313": {
