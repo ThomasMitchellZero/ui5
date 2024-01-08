@@ -8,7 +8,223 @@
     },
     "phases": {
         "Discover": {
-            "stepStr": "Temporary Migration",
+            "stepStr": "Discover",
+            "completion": {
+                "complete": 185,
+                "inProgress": 0,
+                "total": 185
+            },
+            "tasks": {
+                "task313": {
+                    "stepStr": "Task 313",
+                    "completion": {
+                        "complete": 39,
+                        "inProgress": 0,
+                        "total": 39
+                    },
+                    "subtasks": {
+                        "subtask100": {
+                            "stepStr": "Subtask 100",
+                            "completion": {
+                                "complete": 11,
+                                "inProgress": 0,
+                                "total": 11
+                            }
+                        },
+                        "subtask110": {
+                            "stepStr": "Subtask 110",
+                            "completion": {
+                                "complete": 6,
+                                "inProgress": 0,
+                                "total": 6
+                            }
+                        }
+                    }
+                },
+                "task220": {
+                    "stepStr": "Task 220",
+                    "completion": {
+                        "complete": 44,
+                        "inProgress": 0,
+                        "total": 44
+                    },
+                    "subtasks": {}
+                },
+                "task002": {
+                    "stepStr": "Task 002",
+                    "completion": {
+                        "complete": 15,
+                        "inProgress": 0,
+                        "total": 15
+                    },
+                    "subtasks": {}
+                }
+            }
+        },
+        "Prepare": {
+            "stepStr": "Prepare",
+            "completion": {
+                "complete": 144,
+                "inProgress": 0,
+                "total": 144
+            },
+            "tasks": {
+                "task313": {
+                    "stepStr": "Task 313",
+                    "completion": {
+                        "complete": 93,
+                        "inProgress": 0,
+                        "total": 93
+                    },
+                    "subtasks": {
+                        "subtask100": {
+                            "stepStr": "Subtask 100",
+                            "completion": {
+                                "complete": 11,
+                                "inProgress": 0,
+                                "total": 11
+                            }
+                        },
+                        "subtask110": {
+                            "stepStr": "Subtask 110",
+                            "completion": {
+                                "complete": 6,
+                                "inProgress": 0,
+                                "total": 6
+                            }
+                        }
+                    }
+                },
+                "task220": {
+                    "stepStr": "Task 220",
+                    "completion": {
+                        "complete": 44,
+                        "inProgress": 0,
+                        "total": 44
+                    },
+                    "subtasks": {}
+                },
+                "task002": {
+                    "stepStr": "Task 002",
+                    "completion": {
+                        "complete": 15,
+                        "inProgress": 0,
+                        "total": 15
+                    },
+                    "subtasks": {}
+                }
+            }
+        },
+        "Explore": {
+            "stepStr": "Explore",
+            "completion": {
+                "complete": 98,
+                "inProgress": 0,
+                "total": 98
+            },
+            "tasks": {
+                "task313": {
+                    "stepStr": "Task 313",
+                    "completion": {
+                        "complete": 39,
+                        "inProgress": 0,
+                        "total": 39
+                    },
+                    "subtasks": {
+                        "subtask100": {
+                            "stepStr": "Subtask 100",
+                            "completion": {
+                                "complete": 11,
+                                "inProgress": 0,
+                                "total": 11
+                            }
+                        },
+                        "subtask110": {
+                            "stepStr": "Subtask 110",
+                            "completion": {
+                                "complete": 6,
+                                "inProgress": 0,
+                                "total": 6
+                            }
+                        }
+                    }
+                },
+                "task220": {
+                    "stepStr": "Task 220",
+                    "completion": {
+                        "complete": 44,
+                        "inProgress": 0,
+                        "total": 44
+                    },
+                    "subtasks": {}
+                },
+                "task002": {
+                    "stepStr": "Task 002",
+                    "completion": {
+                        "complete": 15,
+                        "inProgress": 0,
+                        "total": 15
+                    },
+                    "subtasks": {}
+                }
+            }
+        },
+        "Realize": {
+            "stepStr": "Realize",
+            "completion": {
+                "complete": 220,
+                "inProgress": 67,
+                "total": 677
+            },
+            "tasks": {
+                "task313": {
+                    "stepStr": "Task 313",
+                    "completion": {
+                        "complete": 112,
+                        "inProgress": 8,
+                        "total": 413
+                    },
+                    "subtasks": {
+                        "subtask100": {
+                            "stepStr": "Subtask 100",
+                            "completion": {
+                                "complete": 110,
+                                "inProgress": 3,
+                                "total": 407
+                            }
+                        },
+                        "subtask110": {
+                            "stepStr": "Subtask 110",
+                            "completion": {
+                                "complete": 2,
+                                "inProgress": 2,
+                                "total": 6
+                            }
+                        }
+                    }
+                },
+                "task220": {
+                    "stepStr": "Task 220",
+                    "completion": {
+                        "complete": 8,
+                        "inProgress": 7,
+                        "total": 44
+                    },
+                    "subtasks": {}
+                },
+                "task002": {
+                    "stepStr": "Task 002",
+                    "completion": {
+                        "complete": 15,
+                        "inProgress": 0,
+                        "total": 15
+                    },
+                    "subtasks": {}
+                }
+            }
+        },
+        "Deploy": {
+            "stepStr": "Deploy",
             "completion": {
                 "complete": 90,
                 "inProgress": 67,
@@ -61,23 +277,60 @@
                 }
             }
         },
-        "development": {
-            "stepStr": "Development",
-            "completion": {
-                "complete": 66,
-                "inProgress": 0,
-                "total": 66
-            },
-            "tasks": {}
-        },
-        "unitTest": {
-            "stepStr": "Unit Test With Client",
+        "Run": {
+            "stepStr": "Run",
             "completion": {
                 "complete": 0,
                 "inProgress": 0,
-                "total": 95
+                "total": 125
             },
-            "tasks": {}
+            "tasks": {
+                "task313": {
+                    "stepStr": "Task 313",
+                    "completion": {
+                        "complete": 0,
+                        "inProgress": 0,
+                        "total": 99
+                    },
+                    "subtasks": {
+                        "subtask100": {
+                            "stepStr": "Subtask 100",
+                            "completion": {
+                                "complete": 0,
+                                "inProgress": 0,
+                                "total": 11
+                            }
+                        },
+                        "subtask110": {
+                            "stepStr": "Subtask 110",
+                            "completion": {
+                                "complete": 0,
+                                "inProgress": 0,
+                                "total": 6
+                            }
+                        }
+                    }
+                },
+                "task220": {
+                    "stepStr": "Task 220",
+                    "completion": {
+                        "complete": 8,
+                        "inProgress": 7,
+                        "total": 44
+                    },
+                    "subtasks": {}
+                },
+                "task002": {
+                    "stepStr": "Task 002",
+                    "completion": {
+                        "complete": 15,
+                        "inProgress": 0,
+                        "total": 15
+                    },
+                    "subtasks": {}
+                }
+            }
         }
+
     }
 }
