@@ -47,16 +47,11 @@
                 </VBox>
             </HBox>
 
-            <Panel
-                id="StepDetailsPanel1"
-                class="sapUiResponsiveMargin"
-                width="auto"
-            >
+
                 <Table
                     id="bookingTable"
                     items="{ActiveScope>/aSteps}"
-                    headerText="Progress"
-                    growing="true"
+                    growing="false"
                     growingThreshold="5"
                     width="auto"
                 >
@@ -125,7 +120,7 @@
                         </ColumnListItem>
                     </items>
                 </Table>
-            </Panel>
+
         </content>
     </Page>
 </mvc:View>
