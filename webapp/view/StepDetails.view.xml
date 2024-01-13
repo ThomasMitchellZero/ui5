@@ -12,6 +12,7 @@
         title="{ActiveScope>/stepStr}"
         titleLevel="Auto"
         showNavButton="true"
+        navButtonPress=".sdNavBack"
     >
         <content>
             <HBox
@@ -31,6 +32,7 @@
                     valueColor="{ActiveScope>/valueColor}"
                     size="L"
                     class="sapUiSmallMarginBeginEnd sapUiMediumMarginTopBottom"
+                    
                 />
                 <VBox id="completionText" class="sapUiSmallMarginBeginEnd sapUiMediumMarginTopBottom">
                     <Title
@@ -45,6 +47,7 @@
                         class="sapMObjectNumberLarge"
                         state="{ActiveScope>/sStatus}"
                         emphasized="true"
+                        
                         unit="{
                             parts: [{value: '/'}, {path: 'ActiveScope>/completion/total'}]
                         }"
@@ -117,9 +120,12 @@
                                 <VBox id="completionNums">
                                     <ObjectNumber
                                         id="cellObjNumber"
-                                        number="{ActiveScope>1/fraction}"
+                                        number="{ActiveScope>1/completion/complete}"
                                         class="sapMObjectNumberLarge"
                                         state="{ActiveScope>1/sStatus}"
+                                        unit="{
+                                            parts: [{value: '/'}, {path: 'ActiveScope>1/completion/total'}]
+                                        }"
                                     />
                                 </VBox>
                             </cells>

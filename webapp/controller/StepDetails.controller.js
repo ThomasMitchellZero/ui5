@@ -92,7 +92,9 @@ sap.ui.define(
 
                 const stopper = "stop"
 
-            }
+            },
+
+            sdNavBack: function () { this.getOwnerComponent().onNavBack() }
 
 
         });

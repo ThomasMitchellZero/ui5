@@ -53,14 +53,10 @@ sap.ui.define(["sap/base/i18n/ResourceBundle"], function (ResourceBundle) {
                 Warning: { title: "No Status", valueColor: "Critical", icon: "sap-icon://high-priority" },
             }
 
-            //circle-task-2
-            //sap-icon://future
-
 
             let oStepStatus = {
                 fraction: `${oCompletion.complete} / ${oCompletion.total}`,
                 percentage: (oCompletion.complete / oCompletion.total * 100) || 0
-
             }
 
             if (oCompletion?.failure) { oStepStatus.sStatus = "Error" } // Something failed
@@ -72,7 +68,8 @@ sap.ui.define(["sap/base/i18n/ResourceBundle"], function (ResourceBundle) {
 
             return oStepStatus
 
-        }
+        },
+
 
 
 

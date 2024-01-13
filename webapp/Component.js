@@ -31,8 +31,9 @@ sap.ui.define([
     "sap/ui/core/UIComponent",
     "sap/ui/Device",
     "sap/ui/model/json/JSONModel",
+    "sap/ui/core/routing/History"
 ],
-    function (UIComponent, Device, JSONModel, ) {
+    function (UIComponent, Device, JSONModel, History ) {
         "use strict";
 
         return UIComponent.extend("hipt.hipt.Component", {
@@ -72,6 +73,18 @@ sap.ui.define([
             _TotalProjectCompletion: function(){
 
             },
+
+            onNavBack: function () {
+                var oHistory = History.getInstance();
+                var sPreviousHash = oHistory.getPreviousHash();
+    
+                if (sPreviousHash !== undefined) {
+                    window.history.go(-1);
+                } else {
+                    var oRouter = this.getRouter();
+                    oRouter.navTo("ProjectDetails", {}, true);
+                }
+            }
 
 
             
