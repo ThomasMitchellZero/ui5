@@ -19,36 +19,23 @@ sap.ui.define(["sap/base/i18n/ResourceBundle"], function (ResourceBundle) {
         },
 
         /*        
-        
-        sapThemeNegativeText	color	X	-	Semantic negative text color
-        sapThemeCriticalText	color	X	-	Semantic critical text color
-        sapThemePositiveText	color	X	-	Semantic positive text color
-        sapThemeLightText	color	X	-	Light text color
-        sapThemeMediumText	color	X	-	Medium text color
-        sapThemeDarkText	color	X	-	Dark text color
-        
-        
-        */
 
-        /*
-        
-sap.ui.core.IconColor.Contrast
+        ----Value Colors----
 
-sap.ui.core.IconColor.Critical
+        sap.m.ValueColor.Critical
+            Critical value color.
 
-sap.ui.core.IconColor.Default
+        Visibility: public
+            sap.m.ValueColor.Error
 
-sap.ui.core.IconColor.Marker
+        sap.m.ValueColor.Good
+            Good value color.
 
-sap.ui.core.IconColor.Negative
+        sap.m.ValueColor.Neutral
+            Neutral value color.
 
-sap.ui.core.IconColor.Neutral
-
-sap.ui.core.IconColor.NonInteractive
-
-sap.ui.core.IconColor.Positive
-
-        
+        sap.m.ValueColor.None
+            
         */
 
 
@@ -59,11 +46,11 @@ sap.ui.core.IconColor.Positive
             const oCompletion = step[1]?.completion || step.completion
 
             const oStatusParams = {
-                Error: { title: "Error", icon: "sap-icon://error" },
-                Information: { title: "In Progress", icon: "sap-icon://pending" },
-                None: { title: "Not Started", icon: "sap-icon://circle-task" },
-                Success: { title: "Complete", icon: "sap-icon://status-completed" },
-                Warning: { title: "No Status", icon: "sap-icon://high-priority" },
+                Error: { title: "Error", valueColor: "Error", icon: "sap-icon://error" },
+                Information: { title: "In Progress", valueColor: "Neutral", icon: "sap-icon://pending" },
+                None: { title: "Not Started", valueColor: "Neutral", icon: "sap-icon://circle-task" },
+                Success: { title: "Complete", valueColor: "Good", icon: "sap-icon://status-completed" },
+                Warning: { title: "No Status", valueColor: "Critical", icon: "sap-icon://high-priority" },
             }
 
             //circle-task-2

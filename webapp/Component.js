@@ -1,5 +1,28 @@
 /**
  * eslint-disable @sap/ui5-jsdocs/no-jsdoc
+ * 
+
+
+
+
+
+I know we'll need an instance of a Build Work Zone in the Cockpit.
+
+I'll need an instance of the HTML5 Application Repository Service.  Should be available in Entitlements.
+
+The app-host plan is the one we want for HTML5 Application Repository Service
+
+And app-host plan and app-runtime, same application
+
+And then the API endpoint for the Cloud Foundry environment, and I think that's it.
+And all of this should be free, I got it all for no money in my trial account.
+
+
+
+
+
+
+ * 
  */
 
 //test

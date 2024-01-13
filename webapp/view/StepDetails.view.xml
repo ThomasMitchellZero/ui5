@@ -10,24 +10,29 @@
     <Page
         id="StepDetails"
         title="{ActiveScope>/stepStr}"
+        titleLevel="Auto"
+        showNavButton="true"
     >
         <content>
             <HBox
                 id="ChartHolder"
                 alignItems="Center"
-                alignContent="Start"
+                alignContent="Center"
                 width="auto"
                 wrap="Wrap"
-                class="sapUiLargeMarginTopBottom sapUiLargeMarginLeftRight"
+                class="sapUiMediumMarginTopBottom"
             >
+                <!--  alignContent="Center"  -->
+                <!--    -->
                 <chart:RadialMicroChart
-                    alignContent="Center"
+                    width="auto"
                     id="progressChart"
                     percentage="{ActiveScope>/percentage}"
-                    valueColor="Good"
+                    valueColor="{ActiveScope>/valueColor}"
                     size="L"
+                    class="sapUiSmallMarginBeginEnd sapUiMediumMarginTopBottom"
                 />
-                <VBox id="completionText">
+                <VBox id="completionText" class="sapUiSmallMarginBeginEnd sapUiMediumMarginTopBottom">
                     <Title
                         id="ChartText"
                         text="{
@@ -38,11 +43,12 @@
                         id="ProjDescription"
                         number="{ActiveScope>/completion/complete}"
                         class="sapMObjectNumberLarge"
-                        state="Success"
+                        state="{ActiveScope>/sStatus}"
                         emphasized="true"
                         unit="{
                             parts: [{value: '/'}, {path: 'ActiveScope>/completion/total'}]
                         }"
+                        
                     />
                 </VBox>
             </HBox>
