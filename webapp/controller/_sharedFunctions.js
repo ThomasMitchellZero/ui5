@@ -61,7 +61,7 @@ sap.ui.define(["sap/base/i18n/ResourceBundle"], function (ResourceBundle) {
 
             if (oCompletion?.failure) { oStepStatus.sStatus = "Error" } // Something failed
             else if (oCompletion.complete === oCompletion.total) { oStepStatus.sStatus = "Success" } // all steps complete
-            else if (oCompletion.inProgress) { oStepStatus.sStatus = "Information" } // in progress, not finished
+            else if (oCompletion.complete) { oStepStatus.sStatus = "Information" } // in progress, not finished
             else (oStepStatus.sStatus = "None") // not started
 
             oStepStatus = { ...oStepStatus, ...oStatusParams[oStepStatus.sStatus] }
