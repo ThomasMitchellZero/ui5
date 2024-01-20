@@ -2,9 +2,9 @@
     "stepKey": "overview",
     "stepStr": "Project Overview",
     "completion": {
-        "complete": 324,
+        "complete": 321,
         "inProgress": 440,
-        "total": 893
+        "total": 873
     },
     "phases": {
         "Discover": {
@@ -129,61 +129,7 @@
                 "SetUpProjectTracker": {
                     "stepStr": "Set Up Project Tracker",
                     "completion": {
-                        "complete": 0,
-                        "inProgress": 0,
-                        "total": 1
-                    },
-                    "subtasks": {}
-                }
-            }
-        },
-        "Explore": {
-            "stepStr": "Explore",
-            "completion": {
-                "complete": 15,
-                "inProgress": 0,
-                "total": 15
-            },
-            "tasks": {
-                "task313": {
-                    "stepStr": "Task 313",
-                    "completion": {
-                        "complete": 3,
-                        "inProgress": 0,
-                        "total": 12
-                    },
-                    "subtasks": {
-                        "subtask100": {
-                            "stepStr": "Subtask 100",
-                            "completion": {
-                                "complete": 1,
-                                "inProgress": 0,
-                                "total": 6
-                            }
-                        },
-                        "subtask110": {
-                            "stepStr": "Subtask 110",
-                            "completion": {
-                                "complete": 2,
-                                "inProgress": 0,
-                                "total": 6
-                            }
-                        }
-                    }
-                },
-                "task220": {
-                    "stepStr": "Task 220",
-                    "completion": {
                         "complete": 1,
-                        "inProgress": 0,
-                        "total": 2
-                    },
-                    "subtasks": {}
-                },
-                "task002": {
-                    "stepStr": "Task 002",
-                    "completion": {
-                        "complete": 0,
                         "inProgress": 0,
                         "total": 1
                     },
